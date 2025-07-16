@@ -15,5 +15,5 @@ MonoBehaviour:
   cardName: 'Firewall '
   cardDescription: Tunder ability. Lorem ipsum etc etc etc etc. rap text check
   tintColor: {r: 1, g: 1, b: 1, a: 1}
-  displaySprite: {fileID: 0}
+  displaySprite: {fileID: 21300000, guid: 80057bfa75e464247b1f4598706b0c50, type: 3}
   effectMaterial: {fileID: 2100000, guid: 2ff873dce69636945b2d6fb1d8340d3b, type: 2}

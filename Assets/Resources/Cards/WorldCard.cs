@@ -9,23 +9,39 @@ public class WorldCard : MonoBehaviour
     [SerializeField] private TextMesh cardName;
     [SerializeField] private TextMesh cardDescription;
 
-    private Material tempMaterial;
+    private Material tempBorderMaterial;
+    private Material tempDisplayMaterial;
+
     [ContextMenu("Refresh Card")]
     public void ApplyCardData()
     {
         if (card == null) return;
 
         // Crear una instancia del material si no existe o si cambió el original
-        if (tempMaterial == null || tempMaterial.name != card.effectMaterial.name + " (Instance)")
+        if (tempBorderMaterial == null || tempBorderMaterial.name != card.effectMaterial.name + " (Instance)")
         {
-            tempMaterial = Instantiate(card.effectMaterial);
-            tempMaterial.name = card.effectMaterial.name + " (Instance)";
+            tempBorderMaterial = Instantiate(card.effectMaterial);
+            tempBorderMaterial.name = card.effectMaterial.name + " (Instance)";
+        }
+
+        // Crear una instancia del material si no existe o si cambió el original
+        if (tempDisplayMaterial == null || tempDisplayMaterial.name != card.effectMaterial.name + " (Instance)")
+        {
+            tempDisplayMaterial = Instantiate(card.effectMaterial);
+            tempDisplayMaterial.name = card.effectMaterial.name + " (Instance)";
         }
 
 #if UNITY_EDITOR
-        cardBorder.sharedMaterial = tempMaterial;
+        cardBorder.sharedMaterial = tempBorderMaterial;
         if (cardBorder.sharedMaterial.HasProperty("_Tint"))
             cardBorder.sharedMaterial.SetColor("_Tint", card.tintColor);
+        if (cardBorder.sharedMaterial.HasProperty("_IsBorder"))
+            cardBorder.sharedMaterial.SetInt("_IsBorder", 0);
+
+
+        cardIcon.sharedMaterial = tempDisplayMaterial;
+        if (cardBorder.sharedMaterial.HasProperty("_IsBorder"))
+            cardBorder.sharedMaterial.SetInt("_IsBorder", 1);
 #else
         cardBorder.material = tempMaterial;
         if (cardBorder.material.HasProperty("_Tint"))
