@@ -8,10 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: StencilMatGreen
-  m_Shader: {fileID: 4800000, guid: 4e981fc70928e8a4b8ea21eca0043e34, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_Shader: {fileID: 4800000, guid: e3b42fdbcf5d9c44e81db27183eb966e, type: 3}
+  m_Parent: {fileID: 2100000, guid: b1693cc5f7d746b489ea2ef1440e5a7d, type: 2}
+  m_ModifiedSerializedProperties: 18
+  m_ValidKeywords:
+  - _PLANARCOLOR_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -22,65 +23,11 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _Glossiness: 0.5
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _ShadowStrength: 1
-    - _SquashAmount: 1
-    - _SrcBlend: 1
-    - _StencilMask: 1
-    - _TranslucencyViewDependency: 0.7
-    - _UVSec: 0
-    - _ZWrite: 1
+    - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.25448638, g: 0.86764705, b: 0.20415224, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TranslucencyColor: {r: 0.73, g: 0.85, b: 0.41, a: 1}
-    - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorTint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

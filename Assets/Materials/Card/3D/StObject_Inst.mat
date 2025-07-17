@@ -7,48 +7,37 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Rainbow
-  m_Shader: {fileID: 4800000, guid: e1bcadcc65ac3b64ba9f26f7752cdbd4, type: 3}
+  m_Name: StObject_Inst
+  m_Shader: {fileID: 4800000, guid: e3b42fdbcf5d9c44e81db27183eb966e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _PLANARCOLOR_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2999
+  m_CustomRenderQueue: 3001
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _AlphaTex:
+    - _BC:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MainTex:
+    - _NM:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Rainbow:
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 72e133a3814c27c4791547e3accb0151, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample2:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Rainbow1:
-        m_Texture: {fileID: 2800000, guid: a06df7a26138ce34e80a7c171d8cd75a, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture0:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture1:
-        m_Texture: {fileID: 2800000, guid: 508bcef22790ff8459a5fa93b6432d0f, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample4:
-        m_Texture: {fileID: 2800000, guid: a06df7a26138ce34e80a7c171d8cd75a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -57,10 +46,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - PixelSnap: 0
-    - _Float2: 0.3
-    - _yes: 0.45
+    - _PlanarColor: 1
+    - __dirty: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorTint: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
