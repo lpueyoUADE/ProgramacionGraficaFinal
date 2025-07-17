@@ -15,5 +15,5 @@ MonoBehaviour:
   cardName: Thunder
   cardDescription: Tunder ability. Lorem ipsum etc etc etc etc. rap text check
   tintColor: {r: 1, g: 1, b: 1, a: 1}
-  displaySprite: {fileID: 21300000, guid: 4ac29af002af2a34f82304b38da210b5, type: 3}
+  displaySprite: {fileID: 21300000, guid: 80057bfa75e464247b1f4598706b0c50, type: 3}
   effectMaterial: {fileID: 2100000, guid: a51579004a06f694f87082309bd4f39b, type: 2}
