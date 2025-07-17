@@ -7,7 +7,6 @@ public class Rotating : MonoBehaviour
     public float rotationSpeed = 10f;  // Velocidad de la rotación
     public float rotationAmount = 5f;  // Cantidad máxima de rotación
 
-    private RectTransform rectTransform;
     private float time;
 
     void Start()
@@ -22,5 +21,10 @@ public class Rotating : MonoBehaviour
         float rotationx = Mathf.Sin(time) * rotationAmount;  // Oscilación senoidal
         float rotationy = Mathf.Cos(time) * rotationAmount;  // Oscilación senoidal
         transform.localRotation = Quaternion.Euler(rotationx, rotationy, 0);
+    }
+
+    private void OnDisable()
+    {
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
 }
