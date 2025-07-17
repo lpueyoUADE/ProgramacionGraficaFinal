@@ -10,4 +10,5 @@ public class Card : ScriptableObject
     public Color tintColor = Color.white;
     public Sprite displaySprite = null;
     public Material effectMaterial = null;
+    public GameObject StencilPrefab = null;
 }
