@@ -38,6 +38,8 @@ public class CardUI : MonoBehaviour
 
     void OnMouseOver()
     {
+        if (!enabled) return;
+
         if (!isSelected)
         {
             isHovered = true;
@@ -47,6 +49,8 @@ public class CardUI : MonoBehaviour
 
     void OnMouseExit()
     {
+        if (!enabled) return;
+
         if (!isSelected)
         {
             isHovered = false;
@@ -56,6 +60,8 @@ public class CardUI : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (!enabled) return;
+
         if (currentlySelected != null && currentlySelected != this)
         {
             currentlySelected.Deselect();
