@@ -16,5 +16,5 @@ MonoBehaviour:
   cardDescription: "Tunder ability. Lorem ipsum etc \netc etc etc. rap text check"
   tintColor: {r: 1, g: 1, b: 1, a: 1}
   displaySprite: {fileID: 21300000, guid: 80057bfa75e464247b1f4598706b0c50, type: 3}
-  effectMaterial: {fileID: 2100000, guid: a51579004a06f694f87082309bd4f39b, type: 2}
+  effectMaterial: {fileID: 2100000, guid: 48a2439df58c41944801a8e3f856f5b2, type: 2}
   StencilPrefab: {fileID: 0}

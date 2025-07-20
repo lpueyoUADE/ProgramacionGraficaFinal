@@ -18,9 +18,11 @@ public class WorldCard : MonoBehaviour
         if (card == null) return;
 
         DestroyImmediate(cardBorder.material);
-        cardBorder.material = Instantiate(card.effectMaterial); ;
-        if (cardBorder.material.HasProperty("_IsBorder"))
-            cardBorder.material.SetInt("_IsBorder", 0);
+        cardBorder.material = Instantiate(card.effectMaterial);
+        if (cardBorder.material.HasProperty("_IsFrame"))
+            cardBorder.material.SetInt("_IsFrame", 1);
+        if (cardBorder.material.HasProperty("_Color"))
+            cardBorder.material.SetColor("_Color", card.tintColor);
 
         if (card.StencilPrefab != null)
         {
@@ -36,8 +38,6 @@ public class WorldCard : MonoBehaviour
         {
             DestroyImmediate(cardIcon.material);
             cardIcon.material = Instantiate(card.effectMaterial); ;
-            if (cardBorder.material.HasProperty("_IsBorder"))
-                cardBorder.material.SetInt("_IsBorder", 1);
         }
 
         cardIcon.sprite = card.displaySprite;
@@ -47,6 +47,6 @@ public class WorldCard : MonoBehaviour
 
     private void Start()
     {
-      //ApplyCardData();
+        ApplyCardData();
     }
 }

@@ -47,7 +47,7 @@ Material:
     m_Floats:
     - PixelSnap: 0
     - _DisplayIntensity: 0.3
-    - _FrameIntensity: 0.9
+    - _FrameIntensity: 0.99
     - _GlobalEffectMultiplier: 1
     - _IsBorder: 0
     m_Colors:

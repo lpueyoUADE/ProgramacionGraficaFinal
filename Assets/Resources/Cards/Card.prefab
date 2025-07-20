@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5228912545474177457}
   - component: {fileID: 1415603205248722611}
   - component: {fileID: 8380484587853153189}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6771759639731220692}
   - component: {fileID: 748284245317921405}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 2739347377842537673}
   - component: {fileID: 153321038510468676}
   - component: {fileID: 1436422317026060612}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 632211442546100393}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: StencilWorldOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 8528347536041409426}
   - component: {fileID: 2553887658707139556}
   - component: {fileID: 4986518722504638596}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 250690693746055427}
   - component: {fileID: 1778851005722085590}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
