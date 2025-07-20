@@ -6,19 +6,29 @@ public class CardUIManager : MonoBehaviour
 {
     public List<CardUI> cards;
     public List<Transform> cardPositions;
+    public GameObject ActionsPanel;
+
+    private void Start()
+    {
+        ActionsPanel.SetActive(false);
+    }
 
     void OnEnable()
     {
         CardUI.OnCardSelected += HandleCardSelected;
+        CardUI.OnCardDeselected += HandleCardDeselected;
     }
 
     void OnDisable()
     {
         CardUI.OnCardSelected -= HandleCardSelected;
+        CardUI.OnCardDeselected -= HandleCardDeselected;
     }
 
     void HandleCardSelected(CardUI card)
     {
+        ActionsPanel.SetActive(true);
+
         bool found = false;
         Vector3 aux;
         for (int i = 0; i < cards.Count; i++)
@@ -37,5 +47,10 @@ public class CardUIManager : MonoBehaviour
                 found = true;
             }
         }
+    }
+
+    void HandleCardDeselected(CardUI card)
+    {
+        ActionsPanel.SetActive(false);
     }
 }
