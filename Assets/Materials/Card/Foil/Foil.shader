@@ -157,7 +157,7 @@ Shader "Foil"
 }
 /*ASEBEGIN
 Version=18900
--1912;31;1904;980;481.2576;-281.958;2.440538;True;False
+-1912;31;1904;980;-607.4681;-798.4388;1.357004;True;False
 Node;AmplifyShaderEditor.TexturePropertyNode;9;689.3884,1278.145;Inherit;True;Property;_FoilNormal;FoilNormal;0;0;Create;True;0;0;0;False;0;False;None;72e133a3814c27c4791547e3accb0151;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.TextureCoordinatesNode;77;711.5396,1549.426;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SamplerNode;11;1049.79,1391.829;Inherit;True;Property;_TextureSample3;Texture Sample 3;4;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
@@ -179,6 +179,7 @@ Node;AmplifyShaderEditor.SaturateNode;107;2793.032,1052.599;Inherit;False;1;0;CO
 Node;AmplifyShaderEditor.RangedFloatNode;111;2767.032,808.5988;Inherit;False;Constant;_Float0;Float 0;2;0;Create;True;0;0;0;False;0;False;0.1;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.LerpOp;110;3017.032,1017.599;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SaturateNode;108;3189.032,1019.599;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.ViewDirInputsCoordNode;113;1997.04,1749.698;Inherit;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;0;3372.795,1021.333;Float;False;True;-1;2;ASEMaterialInspector;0;6;Foil;0f8ba0101102bb14ebf021ddadce9b49;True;SubShader 0 Pass 0;0;0;SubShader 0 Pass 0;2;False;True;3;1;False;-1;10;False;-1;0;1;False;-1;0;False;-1;False;False;False;False;False;False;False;False;False;False;False;False;True;2;False;-1;False;False;False;False;False;False;False;False;False;False;False;True;2;False;-1;False;False;True;5;Queue=Transparent=Queue=0;IgnoreProjector=True;RenderType=Transparent=RenderType;PreviewType=Plane;CanUseSpriteAtlas=True;False;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;2;0;;0;0;Standard;0;0;1;True;False;;False;0
 WireConnection;11;0;9;0
 WireConnection;11;1;77;0
@@ -204,4 +205,4 @@ WireConnection;110;2;111;0
 WireConnection;108;0;110;0
 WireConnection;0;0;108;0
 ASEEND*/
-//CHKSM=4EE232C352409EA30C574E3B0F07BF028CE2FD3E
+//CHKSM=78A6B5C4B49AE5B6C27DD84F7A4F5838E49ECAB5

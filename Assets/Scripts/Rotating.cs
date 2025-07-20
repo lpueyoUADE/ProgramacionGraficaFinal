@@ -1,30 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Rotating : MonoBehaviour
 {
-    public float rotationSpeed = 10f;  // Velocidad de la rotación
-    public float rotationAmount = 5f;  // Cantidad máxima de rotación
+    public float rotationSpeed = 10f;   // Velocidad de la rotación
+    public float rotationAmount = 5f;   // Cantidad máxima de rotación
 
     private float time;
+    private Quaternion initialRotation;
 
     void Start()
     {
-        // rectTransform = GetComponent<RectTransform>();
+        initialRotation = transform.localRotation;
         time = Random.Range(0f, Mathf.PI * 2f);  // Para desincronizar el efecto
     }
 
     void Update()
     {
         time += Time.deltaTime * rotationSpeed;
-        float rotationx = Mathf.Sin(time) * rotationAmount;  // Oscilación senoidal
-        float rotationy = Mathf.Cos(time) * rotationAmount;  // Oscilación senoidal
-        transform.localRotation = Quaternion.Euler(rotationx, rotationy, 0);
+
+        float rotationX = Mathf.Sin(time) * rotationAmount;
+        float rotationY = Mathf.Cos(time) * rotationAmount;
+
+        Quaternion offsetRotation = Quaternion.Euler(rotationX, rotationY, 0);
+        transform.localRotation = initialRotation * offsetRotation;
     }
 
     private void OnDisable()
     {
-        transform.localRotation = Quaternion.Euler(0, 0, 0);
+        transform.localRotation = initialRotation;
     }
 }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7967777605364110187}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: StencilWorldTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2227098622294575568}
   - component: {fileID: 3988482864218682133}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 7779880315209624362}
   - component: {fileID: 3306472663583002318}
   - component: {fileID: 3042689969351386878}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 7926698099361973493}
   - component: {fileID: 6574984208807817451}
   - component: {fileID: 4458735255231999218}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 6669460396433839075}
   - component: {fileID: 3175315029448470985}
   - component: {fileID: 3849527804918677217}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
