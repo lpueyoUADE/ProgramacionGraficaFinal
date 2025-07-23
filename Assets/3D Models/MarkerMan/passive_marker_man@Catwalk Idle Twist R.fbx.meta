@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Body_MAT
-    second: {fileID: 2100000, guid: 272e3b8bbecfa6346bb54af93dbfd16e, type: 2}
+    second: {fileID: 2100000, guid: 71cce2f5292a82c49991463a6a0089e8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

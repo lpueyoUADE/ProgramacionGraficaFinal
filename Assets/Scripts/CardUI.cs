@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class CardUI : MonoBehaviour
 {
@@ -9,20 +10,24 @@ public class CardUI : MonoBehaviour
     private Vector3 originalScale;
     private Vector3 targetScale;
 
-    public Vector3 restingPosition;
+    private Vector3 restingPosition;
 
-    public float hoverHeight = 0.5f;
-    public float moveSpeed = 5f;
-    public float scaleSpeed = 10f;
-    public float scaleFactor = 2f;
+    public CardUIParams cardParams;
 
     public Transform selectedSpot;
+
+    private Character characterInstance;
+
     private static CardUI currentlySelected;
 
     private bool isHovered = false;
     private bool isSelected = false;
 
-    public bool IsSelected { get => isSelected; set => isSelected = value; }
+    private float dissolveAmount;
+    private Coroutine currentDissolveAnim;
+
+    public bool IsSelected { get => isSelected; }
+    public Vector3 RestingPosition { get => restingPosition; }
 
     public static Action<CardUI> OnCardSelected;
     public static Action<CardUI> OnCardDeselected;
@@ -34,8 +39,10 @@ public class CardUI : MonoBehaviour
 
         originalScale = transform.localScale;
         targetScale = originalScale;
-    }
 
+        characterInstance = null;
+        dissolveAmount = 1f;
+    }
     void OnMouseOver()
     {
         if (!enabled) return;
@@ -43,7 +50,7 @@ public class CardUI : MonoBehaviour
         if (!isSelected)
         {
             isHovered = true;
-            targetPosition = restingPosition + Vector3.up * hoverHeight;
+            targetPosition = restingPosition + Vector3.up * cardParams.hoverHeight;
         }
     }
 
@@ -85,8 +92,13 @@ public class CardUI : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * moveSpeed);
-        transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * scaleSpeed);
+        if (transform.position == targetPosition)
+        {
+            return;
+        }
+
+        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * cardParams.moveSpeed);
+        transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * cardParams.scaleSpeed);
     }
 
     public void Select()
@@ -95,11 +107,13 @@ public class CardUI : MonoBehaviour
         currentlySelected = this;
 
         targetPosition = selectedSpot.position;
-        targetScale = originalScale * scaleFactor;
+        targetScale = originalScale * cardParams.scaleFactor;
 
         OnCardSelected?.Invoke(this);
 
         GetComponent<Rotating>().enabled = true;
+
+        AudioSource.PlayClipAtPoint(cardParams.selectedSound, Camera.main.transform.position);
     }
     public void Deselect()
     {
@@ -111,5 +125,67 @@ public class CardUI : MonoBehaviour
         currentlySelected = null;
 
         GetComponent<Rotating>().enabled = false;
+
+        AudioSource.PlayClipAtPoint(cardParams.deselectedSound, Camera.main.transform.position);
+    }
+
+    public void InvokeCharacter(Vector3 position, Transform parent)
+    {
+        if (characterInstance == null)
+        {
+            var newInstance = Instantiate(cardParams.characterPrefab, position, cardParams.characterPrefab.transform.rotation);
+            characterInstance = newInstance.GetComponent<Character>();
+            characterInstance.transform.parent = parent;
+
+        }
+
+        if (currentDissolveAnim != null)
+            StopCoroutine(currentDissolveAnim);
+
+        currentDissolveAnim = StartCoroutine(AnimateDissolve(0));
+    }
+
+    public void VanishCharacter()
+    {
+        if (characterInstance == null)
+        {
+            return;
+        }
+
+        if (currentDissolveAnim != null)
+            StopCoroutine(currentDissolveAnim);
+
+        currentDissolveAnim = StartCoroutine(AnimateDissolve(1));
+    }
+
+    IEnumerator AnimateDissolve(float target)
+    {
+        float start = dissolveAmount;
+        float elapsed = 0f;
+        float dissolveTime = cardParams.dissolveAnimationTime;
+
+        if (target == 0)
+        {
+            characterInstance.gameObject.SetActive(true);
+        }
+
+        while (elapsed < dissolveTime)
+        {
+            foreach (var material in characterInstance.ExposedMaterials)
+            {
+                if (material.HasFloat("_DissolveAmount"))
+                    material.SetFloat("_DissolveAmount", dissolveAmount);
+            }
+            dissolveAmount = Mathf.Lerp(start, target, elapsed / dissolveTime);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        if(target == 1)
+        {
+            characterInstance.gameObject.SetActive(false);
+        }
+
+        dissolveAmount = target;
     }
 }

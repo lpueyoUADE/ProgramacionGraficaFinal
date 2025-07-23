@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca22bdeca08624448a590613a3275dfd, type: 3}
+  m_Name: CardUIParams_1
+  m_EditorClassIdentifier: 
+  hoverHeight: 0.5
+  moveSpeed: 5
+  scaleSpeed: 5
+  scaleFactor: 2.5
+  characterPrefab: {fileID: 4676577102425270918, guid: cf3b626ce05a20247b2a24aee6dbc2fc, type: 3}
+  selectedSound: {fileID: 8300000, guid: c013a0be2192fd34b9a3366e801ed051, type: 3}
+  deselectedSound: {fileID: 8300000, guid: 2c6242047b2296f4ea4f2421a077d7dc, type: 3}

@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class Rotating : MonoBehaviour
 {
-    public float rotationSpeed = 10f;   // Velocidad de la rotación
-    public float rotationAmount = 5f;   // Cantidad máxima de rotación
+    public Rotation rotation;
 
     private float time;
     private Quaternion initialRotation;
@@ -16,10 +15,10 @@ public class Rotating : MonoBehaviour
 
     void Update()
     {
-        time += Time.deltaTime * rotationSpeed;
+        time += Time.deltaTime * rotation.speed;
 
-        float rotationX = Mathf.Sin(time) * rotationAmount;
-        float rotationY = Mathf.Cos(time) * rotationAmount;
+        float rotationX = Mathf.Sin(time) * rotation.amount;
+        float rotationY = Mathf.Cos(time) * rotation.amount;
 
         Quaternion offsetRotation = Quaternion.Euler(rotationX, rotationY, 0);
         transform.localRotation = initialRotation * offsetRotation;

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HeadLookAtMouse : MonoBehaviour
 {
-    public Camera cam;
+    
     public float lookAtWeight = 1.0f;         // Qué tan fuerte es el efecto
     public float bodyWeight = 0.0f;           // Qué tanto rota el torso
     public float headWeight = 1.0f;           // Qué tanto rota la cabeza
@@ -19,8 +19,11 @@ public class HeadLookAtMouse : MonoBehaviour
 
     private float lastMouseMovementCounter;
     private Vector3 lastMousePosition;
+    private Camera cam;
+
     void Start()
     {
+        cam = Camera.main;
         animator = GetComponent<Animator>();
         lastMouseMovementCounter = 0;
         lastMousePosition = Input.mousePosition;

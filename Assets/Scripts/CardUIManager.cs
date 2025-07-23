@@ -8,8 +8,17 @@ public class CardUIManager : MonoBehaviour
     public List<Transform> cardPositions;
     public GameObject ActionsPanel;
 
+    public GameObject spawnParent;
+    public Transform spawnPoint;
+
+    private CardUI selectedCard;
+    private CardUI invokedCard;
+
     private void Start()
     {
+        selectedCard = null;
+        invokedCard = null;
+
         ActionsPanel.SetActive(false);
     }
 
@@ -29,6 +38,8 @@ public class CardUIManager : MonoBehaviour
     {
         ActionsPanel.SetActive(true);
 
+        selectedCard = card;
+
         bool found = false;
         Vector3 aux;
         for (int i = 0; i < cards.Count; i++)
@@ -37,8 +48,8 @@ public class CardUIManager : MonoBehaviour
             {
                 (cards[i], cards[i - 1]) = (cards[i - 1], cards[i]);
 
-                aux = cards[i].restingPosition;
-                cards[i].UpdateRestingPostion(cards[i - 1].restingPosition);
+                aux = cards[i].RestingPosition;
+                cards[i].UpdateRestingPostion(cards[i - 1].RestingPosition);
                 cards[i - 1].UpdateRestingPostion(aux);
             }
 
@@ -51,6 +62,33 @@ public class CardUIManager : MonoBehaviour
 
     void HandleCardDeselected(CardUI card)
     {
+        selectedCard = null;
         ActionsPanel.SetActive(false);
+    }
+
+
+    public void InvokeCharacter()
+    {
+        if(invokedCard != null)
+        {
+            if (invokedCard == selectedCard)
+            {
+                return;
+            }
+            
+            invokedCard.VanishCharacter();
+        }
+
+        selectedCard.InvokeCharacter(spawnPoint.position, spawnParent.transform);
+        invokedCard = selectedCard;
+    }
+
+    public void VanishCharacter()
+    {
+        if (invokedCard != null)
+        {
+            invokedCard.VanishCharacter();
+            invokedCard = null;
+        }
     }
 }
