@@ -16,6 +16,10 @@ MonoBehaviour:
   moveSpeed: 5
   scaleSpeed: 5
   scaleFactor: 2.5
+  dissolveAnimationTime: 1
   characterPrefab: {fileID: 4676577102425270918, guid: cf3b626ce05a20247b2a24aee6dbc2fc, type: 3}
   selectedSound: {fileID: 8300000, guid: c013a0be2192fd34b9a3366e801ed051, type: 3}
   deselectedSound: {fileID: 8300000, guid: 2c6242047b2296f4ea4f2421a077d7dc, type: 3}
+  hoverSound: {fileID: 8300000, guid: d8b74db708bc76e439f4034b57b7a52a, type: 3}
+  invokeSound: {fileID: 8300000, guid: 8073a4b29a9132f4a9d9b9365c394939, type: 3}
+  vanishSound: {fileID: 8300000, guid: 5758992a8a3f84748809797da7d099f0, type: 3}

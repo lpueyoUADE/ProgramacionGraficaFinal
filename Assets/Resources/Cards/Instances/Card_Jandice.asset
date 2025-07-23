@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc7d4f423f42d54b899e91e5a5b8963, type: 3}
+  m_Name: Card_Jandice
+  m_EditorClassIdentifier: 
+  cardName: Jandice Barov
+  cardDescription: "Ilusionista maestra \nde Scholomance, confunde\na sus enemigos
+    con \nduplicados perfectos antes\nde asestar el golpe letal."
+  tintColor: {r: 1, g: 1, b: 1, a: 1}
+  displaySprite: {fileID: 21300000, guid: 80057bfa75e464247b1f4598706b0c50, type: 3}
+  effectMaterial: {fileID: 2100000, guid: 48a2439df58c41944801a8e3f856f5b2, type: 2}
+  StencilPrefab: {fileID: 342804988635670419, guid: 97298daf6e103924f912505c0adef2ae, type: 3}

@@ -16,5 +16,8 @@ public class CardUIParams : ScriptableObject
 
     public AudioClip selectedSound;
     public AudioClip deselectedSound;
+    public AudioClip hoverSound;
+    public AudioClip invokeSound;
+    public AudioClip vanishSound;
 }
 

@@ -58,7 +58,7 @@ Shader "BurnSpawn"
 }
 /*ASEBEGIN
 Version=18900
-0;613;1526;378;2803.809;143.2829;1.888266;True;False
+0;497;1526;494;4119.703;972.3817;3.8383;True;False
 Node;AmplifyShaderEditor.CommentaryNode;1;-2248.207,-67.74789;Inherit;False;984.0087;498.3652;Dissolve - Opacity Mask;6;2;3;17;6;5;4;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.RangedFloatNode;2;-2216.985,72.91039;Float;False;Property;_DissolveAmount;Dissolve Amount;5;0;Create;True;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.OneMinusNode;3;-1921.412,7.756646;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
@@ -98,4 +98,4 @@ WireConnection;0;1;15;0
 WireConnection;0;2;13;0
 WireConnection;0;10;20;0
 ASEEND*/
-//CHKSM=9ED312775842199319740C11508E03E1AC32C324
+//CHKSM=92D836FAD1F803770104E1F86CBBA523142F4AD9

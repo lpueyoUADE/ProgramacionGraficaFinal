@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -11,8 +12,26 @@ public class Character : MonoBehaviour
 
     public List<Material> ExposedMaterials { get => exposedMaterials; }
 
+    private Animator animator;
+
+    public enum Actions
+    {
+        IDLE,
+        INVOKE,
+        VANISH
+    }
+
+    public Dictionary<Actions, string> ActionsTriggerValue =
+    new() {
+        {Actions.IDLE, "DoIdle"},
+        {Actions.INVOKE, "DoInvoke"},
+        {Actions.VANISH, "DoVanish"},
+    };
+
     private void Awake()
     {
+        animator = GetComponent<Animator>();
+
         var skinnedRenderers = GetComponentsInChildren<SkinnedMeshRenderer>(true);
         foreach (var renderer in skinnedRenderers)
         {
@@ -22,5 +41,10 @@ public class Character : MonoBehaviour
                     exposedMaterials.Add(mat);
             }
         }
+    }
+
+    public void DoAction(Actions action)
+    {
+        animator.SetTrigger(ActionsTriggerValue[action]);
     }
 }

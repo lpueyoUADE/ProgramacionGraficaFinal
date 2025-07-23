@@ -43,6 +43,13 @@ public class CardUI : MonoBehaviour
         characterInstance = null;
         dissolveAmount = 1f;
     }
+    private void OnMouseEnter()
+    {
+        if (!isSelected)
+        { 
+            AudioSource.PlayClipAtPoint(cardParams.hoverSound, Camera.main.transform.position);
+        }
+    }
     void OnMouseOver()
     {
         if (!enabled) return;
@@ -71,7 +78,7 @@ public class CardUI : MonoBehaviour
 
         if (currentlySelected != null && currentlySelected != this)
         {
-            currentlySelected.Deselect();
+            currentlySelected.Deselect(false);
         }
 
         if (!isSelected)
@@ -101,7 +108,7 @@ public class CardUI : MonoBehaviour
         transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * cardParams.scaleSpeed);
     }
 
-    public void Select()
+    public void Select(bool emitSound=true)
     {
         isSelected = true;
         currentlySelected = this;
@@ -113,9 +120,10 @@ public class CardUI : MonoBehaviour
 
         GetComponent<Rotating>().enabled = true;
 
-        AudioSource.PlayClipAtPoint(cardParams.selectedSound, Camera.main.transform.position);
+        if(emitSound)
+            AudioSource.PlayClipAtPoint(cardParams.selectedSound, Camera.main.transform.position);
     }
-    public void Deselect()
+    public void Deselect(bool emitSound=true)
     {
         isSelected = false;
         targetPosition = restingPosition;
@@ -126,10 +134,11 @@ public class CardUI : MonoBehaviour
 
         GetComponent<Rotating>().enabled = false;
 
-        AudioSource.PlayClipAtPoint(cardParams.deselectedSound, Camera.main.transform.position);
+        if(emitSound)
+            AudioSource.PlayClipAtPoint(cardParams.deselectedSound, Camera.main.transform.position);
     }
 
-    public void InvokeCharacter(Vector3 position, Transform parent)
+    public void InvokeCharacter(Vector3 position, Transform parent, bool emitSound=true)
     {
         if (characterInstance == null)
         {
@@ -142,10 +151,15 @@ public class CardUI : MonoBehaviour
         if (currentDissolveAnim != null)
             StopCoroutine(currentDissolveAnim);
 
+        if (emitSound)
+            AudioSource.PlayClipAtPoint(cardParams.invokeSound, Camera.main.transform.position);
+
+        
+
         currentDissolveAnim = StartCoroutine(AnimateDissolve(0));
     }
 
-    public void VanishCharacter()
+    public void VanishCharacter(bool emitSound=true)
     {
         if (characterInstance == null)
         {
@@ -154,6 +168,9 @@ public class CardUI : MonoBehaviour
 
         if (currentDissolveAnim != null)
             StopCoroutine(currentDissolveAnim);
+
+        if (emitSound)
+            AudioSource.PlayClipAtPoint(cardParams.vanishSound, Camera.main.transform.position);
 
         currentDissolveAnim = StartCoroutine(AnimateDissolve(1));
     }
@@ -167,6 +184,10 @@ public class CardUI : MonoBehaviour
         if (target == 0)
         {
             characterInstance.gameObject.SetActive(true);
+            characterInstance.DoAction(Character.Actions.INVOKE);
+        } else
+        {
+            characterInstance.DoAction(Character.Actions.VANISH);
         }
 
         while (elapsed < dissolveTime)

@@ -76,7 +76,7 @@ public class CardUIManager : MonoBehaviour
                 return;
             }
             
-            invokedCard.VanishCharacter();
+            invokedCard.VanishCharacter(false);
         }
 
         selectedCard.InvokeCharacter(spawnPoint.position, spawnParent.transform);
