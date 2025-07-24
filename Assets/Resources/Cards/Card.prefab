@@ -91,11 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22090a4a2da0bf24faf84849ab512a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restingPosition: {x: 0, y: 0, z: 0}
-  hoverHeight: 0.5
-  moveSpeed: 5
-  scaleSpeed: 5
-  scaleFactor: 2.5
+  cardParams: {fileID: 0}
   selectedSpot: {fileID: 0}
 --- !u!114 &8380484587853153189
 MonoBehaviour:
@@ -109,8 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81a9bf4a846efb418d9d19e3eed2317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 2
-  rotationAmount: 3
+  rotation: {fileID: 0}
 --- !u!1 &887795887728840791
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +448,7 @@ Transform:
   m_GameObject: {fileID: 9006685612529177161}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0.001}
+  m_LocalPosition: {x: 0, y: 0, z: 0.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
