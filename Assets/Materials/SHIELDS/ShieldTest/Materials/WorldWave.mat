@@ -45,7 +45,7 @@ Material:
     - _X: 0
     - _Y: 0
     - _Z: 0
-    - __dirty: 0
+    - __dirty: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
