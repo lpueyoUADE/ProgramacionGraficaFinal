@@ -9,6 +9,7 @@ Shader "RainbowTint"
 		[MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
 		[PerRendererData] _AlphaTex ("External Alpha", 2D) = "white" {}
 		_RainbowRamp("RainbowRamp", 2D) = "white" {}
+		_PannerSlowAmount("PannerSlowAmount", Float) = 10
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 
 	}
@@ -65,6 +66,7 @@ Shader "RainbowTint"
 			uniform sampler2D _AlphaTex;
 			uniform float4 _MainTex_ST;
 			uniform sampler2D _RainbowRamp;
+			uniform float _PannerSlowAmount;
 
 			
 			v2f vert( appdata_t IN  )
@@ -114,7 +116,7 @@ Shader "RainbowTint"
 				float3 objectSpaceViewDir113 = ObjSpaceViewDir( float4( 0,0,0,1 ) );
 				float3 ase_worldNormal = IN.ase_texcoord1.xyz;
 				float dotResult110 = dot( objectSpaceViewDir113 , ase_worldNormal );
-				float2 temp_cast_1 = (( dotResult110 / 10.0 )).xx;
+				float2 temp_cast_1 = (( dotResult110 / _PannerSlowAmount )).xx;
 				float2 texCoord116 = IN.texcoord.xy * float2( 0.4,0.2 ) + temp_cast_1;
 				float4 appendResult98 = (float4((( grayscale84 * tex2D( _RainbowRamp, texCoord116 ) )).rgb , 1.0));
 				
@@ -131,12 +133,13 @@ Shader "RainbowTint"
 }
 /*ASEBEGIN
 Version=18900
--1912;71;1904;934;347.1707;230.2005;1.369704;True;False
-Node;AmplifyShaderEditor.ObjSpaceViewDirHlpNode;113;-967.4125,532.19;Inherit;False;1;0;FLOAT4;0,0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.WorldNormalVector;112;-975.3754,739.65;Inherit;False;False;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.DotProductOpNode;110;-666.9232,643.0715;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SimpleDivideOpNode;125;-457.3313,640.729;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;10;False;1;FLOAT;0
+8;215;1904;706;1213.805;-333.6541;1;True;False
+Node;AmplifyShaderEditor.ObjSpaceViewDirHlpNode;113;-719.9594,459.3204;Inherit;False;1;0;FLOAT4;0,0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.WorldNormalVector;112;-727.9223,666.7805;Inherit;False;False;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.DotProductOpNode;110;-419.4702,570.2019;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;126;-429.3652,757.5404;Inherit;False;Property;_PannerSlowAmount;PannerSlowAmount;1;0;Create;True;0;0;0;False;0;False;10;10;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.TemplateShaderPropertyNode;70;515.9535,200.1581;Inherit;False;0;0;_MainTex;Shader;False;0;5;SAMPLER2D;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SimpleDivideOpNode;125;-209.8784,566.3413;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;10;False;1;FLOAT;0
 Node;AmplifyShaderEditor.TextureCoordinatesNode;116;60.12201,581.033;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;0.4,0.2;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SamplerNode;75;752.694,201.1596;Inherit;True;Property;_TextureSample0;Texture Sample 0;4;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.TFHCGrayscale;84;1127.529,222.0529;Inherit;False;1;1;0;FLOAT3;0,0,0;False;1;FLOAT;0
@@ -148,6 +151,7 @@ Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;1;2200.755,272.8772;Float;F
 WireConnection;110;0;113;0
 WireConnection;110;1;112;0
 WireConnection;125;0;110;0
+WireConnection;125;1;126;0
 WireConnection;116;1;125;0
 WireConnection;75;0;70;0
 WireConnection;84;0;75;0
@@ -158,4 +162,4 @@ WireConnection;99;0;97;0
 WireConnection;98;0;99;0
 WireConnection;1;0;98;0
 ASEEND*/
-//CHKSM=B87B06C1E91FAFB2080BC50F70CEE8C96BD5FD4B
+//CHKSM=A7CFA23ACCB138D5C3F5527F417B906AD2C4C3B9

@@ -27,6 +27,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _FoilNormal:
+        m_Texture: {fileID: 2800000, guid: d74faa75c327f0c4e9b41b7174930fa6, type: 3}
+        m_Scale: {x: 5, y: 5}
+        m_Offset: {x: 0, y: 0}
     - _FoilNormal1:
         m_Texture: {fileID: 2800000, guid: d74faa75c327f0c4e9b41b7174930fa6, type: 3}
         m_Scale: {x: 4.25, y: 4.25}
@@ -50,9 +54,14 @@ Material:
     m_Ints: []
     m_Floats:
     - PixelSnap: 0
+    - _Brightness: 2
+    - _Float0: 0
     - _IsBorder: 0
     - _IsFrame: 0
+    - _LoweringForce: 1
     m_Colors:
     - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _GoldBasecolor: {r: 0.9433962, g: 0.731577, b: 0.41384828, a: 1}
+    - _GoldDarkestValue: {r: 0.33018863, g: 0.22753564, b: 0.104352064, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
