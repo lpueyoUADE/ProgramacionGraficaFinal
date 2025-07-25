@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3022774166153312996}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 7594968180183629822}
   - component: {fileID: 5657163349950827316}
   - component: {fileID: 588080460698987041}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "JandiceP\xF6se"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,6 +292,10 @@ PrefabInstance:
     - target: {fileID: 1658287458925124, guid: 1499c673ad068e74e90b288302fa8b6b, type: 3}
       propertyPath: m_Name
       value: Willow_tree2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658287458925124, guid: 1499c673ad068e74e90b288302fa8b6b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4754983667399276, guid: 1499c673ad068e74e90b288302fa8b6b, type: 3}
       propertyPath: m_LocalScale.x
