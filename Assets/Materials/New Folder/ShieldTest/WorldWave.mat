@@ -25,14 +25,16 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Frequency: 1
-    - _Height: 0.01
+    - _Frequency: 0.3
+    - _Height: 0.001
+    - _MinSepparation: 0.1
     - _TimeScale: 5
     - _World: 0
     - _X: 0
-    - _Z: 1
+    - _Y: 0
+    - _Z: 0
     - __dirty: 0
     m_Colors:
-    - _Deformation: {r: 0.1, g: 0.1, b: 0, a: 0.1}
+    - _Deformation: {r: 0.1, g: 0.1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
