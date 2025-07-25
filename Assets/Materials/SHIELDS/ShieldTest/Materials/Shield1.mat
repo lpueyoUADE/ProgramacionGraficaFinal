@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShieldTest
+  m_Name: Shield1
   m_Shader: {fileID: 4800000, guid: a89060fbae761e342bde6951b62d7b93, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -59,10 +59,11 @@ Material:
     - _Frecuency: 10
     - _FresnelScale: 7.23
     - _Opacity: 0.22
+    - _OpacityPower: 0.4
     - _PatternSize: 5
     - _PatternSpeed: -0.59
     - _ShieldPatternPower: 50
-    - _ShieldRimPower: 3
+    - _ShieldRimPower: 3.3336844
     - _TransAmbient: 0.2
     - _TransDirect: 1
     - _TransNormalDistortion: 0.1
