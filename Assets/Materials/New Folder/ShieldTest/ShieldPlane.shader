@@ -57,7 +57,7 @@ Shader "ShieldPlane"
 }
 /*ASEBEGIN
 Version=18900
-519.2;73.6;691.6;463.8;621.14;56.74302;1.098718;False;False
+484.8;73.6;726.0001;471.8;1537.05;829.0945;3.063017;False;False
 Node;AmplifyShaderEditor.RangedFloatNode;6;-1259.338,184.3334;Inherit;False;Property;_X;X;1;0;Create;True;0;0;0;False;0;False;0;0;-10;10;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;5;-1271.971,338.3539;Inherit;False;Property;_Z;Z;0;0;Create;True;0;0;0;False;0;False;0;0;-10;10;0;1;FLOAT;0
 Node;AmplifyShaderEditor.PosVertexDataNode;2;-1029.134,-7.956056;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
@@ -79,4 +79,4 @@ WireConnection;0;0;9;0
 WireConnection;0;11;8;0
 WireConnection;0;12;8;0
 ASEEND*/
-//CHKSM=4AC8E6F989F24D47F2F3242A5429A07762575CEA
+//CHKSM=C730A8C201409EC5A3371B4B5D388DC78E5276A0
