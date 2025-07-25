@@ -138,6 +138,11 @@ public class CardUI : MonoBehaviour
             AudioSource.PlayClipAtPoint(cardParams.deselectedSound, Camera.main.transform.position);
     }
 
+    public void ToggleCharacterShield()
+    {
+        characterInstance.CharacterShield.Toggle();
+    }
+
     public void InvokeCharacter(Vector3 position, Transform parent, bool emitSound=true)
     {
         if (characterInstance == null)
@@ -171,6 +176,8 @@ public class CardUI : MonoBehaviour
 
         if (emitSound)
             AudioSource.PlayClipAtPoint(cardParams.vanishSound, Camera.main.transform.position);
+
+        characterInstance.CharacterShield.Disable(false);
 
         currentDissolveAnim = StartCoroutine(AnimateDissolve(1));
     }

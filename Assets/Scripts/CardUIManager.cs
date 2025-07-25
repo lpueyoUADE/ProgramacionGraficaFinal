@@ -22,6 +22,14 @@ public class CardUIManager : MonoBehaviour
         ActionsPanel.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M) && invokedCard != null)
+        {
+            invokedCard.ToggleCharacterShield();
+        }
+    }
+
     void OnEnable()
     {
         CardUI.OnCardSelected += HandleCardSelected;

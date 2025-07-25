@@ -1,5 +1,83 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5549574968305764027
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9048867128546486848}
+    m_Modifications:
+    - target: {fileID: 4876295386720906586, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: frequencySpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.0476542
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.0476542
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.0476542
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.036
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.411
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733576278616244292, guid: 054d72200d23d8c409621e493360520f, type: 3}
+      propertyPath: m_Name
+      value: JandiceShield
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 054d72200d23d8c409621e493360520f, type: 3}
+--- !u!4 &711037213578927173 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4961297266741041918, guid: 054d72200d23d8c409621e493360520f, type: 3}
+  m_PrefabInstance: {fileID: 5549574968305764027}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8799666197131267499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,7 +156,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d640b8ad8580fcc43837e4efadc142ca, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae13297266a93804baa57047a340980d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 711037213578927173}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ae13297266a93804baa57047a340980d, type: 3}
       insertIndex: -1
@@ -130,3 +211,8 @@ MonoBehaviour:
   eyesWeight: 1
   clampWeight: 0.5
   stopLookingAfter: 2
+--- !u!4 &9048867128546486848 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae13297266a93804baa57047a340980d, type: 3}
+  m_PrefabInstance: {fileID: 8799666197131267499}
+  m_PrefabAsset: {fileID: 0}

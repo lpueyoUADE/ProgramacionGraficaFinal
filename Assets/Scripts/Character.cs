@@ -10,9 +10,12 @@ public class Character : MonoBehaviour
 
     public List<Material> exposedMaterials;
 
-    public List<Material> ExposedMaterials { get => exposedMaterials; }
+    private CharacterShield characterShield;
 
     private Animator animator;
+    public List<Material> ExposedMaterials { get => exposedMaterials; }
+    public CharacterShield CharacterShield { get => characterShield; set => characterShield = value; }
+
 
     public enum Actions
     {
@@ -31,6 +34,8 @@ public class Character : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+
+        characterShield = GetComponentInChildren<CharacterShield>();
 
         var skinnedRenderers = GetComponentsInChildren<SkinnedMeshRenderer>(true);
         foreach (var renderer in skinnedRenderers)

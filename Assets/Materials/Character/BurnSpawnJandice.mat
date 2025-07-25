@@ -46,7 +46,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Cutoff: 0.5
-    - _DissolveAmount: 0.99192476
+    - _DissolveAmount: 0.014883697
     - __dirty: 0
     m_Colors: []
   m_BuildTextureStacks: []
