@@ -141,6 +141,7 @@ public class CardUI : MonoBehaviour
     public void ToggleCharacterShield()
     {
         characterInstance.CharacterShield.Toggle();
+        characterInstance.DoAction(Character.Actions.INVOKE);
     }
 
     public void InvokeCharacter(Vector3 position, Transform parent, bool emitSound=true)

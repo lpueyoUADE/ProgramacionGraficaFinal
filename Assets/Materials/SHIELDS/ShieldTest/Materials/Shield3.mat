@@ -44,6 +44,7 @@ Material:
     - _Float1: 0.15
     - _FresnelScale: 3.12
     - _IntersectionPower: 0.2
+    - _Opacity: 0.3383762
     - _OpacityPower: 0.3
     - _PatternSize: 2.9
     - _PatternSpeed: 0.15

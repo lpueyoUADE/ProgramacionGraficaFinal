@@ -17,12 +17,12 @@ public class WorldCard : MonoBehaviour
     {
         if (card == null) return;
 
-        DestroyImmediate(cardBorder.material);
-        cardBorder.material = Instantiate(card.effectMaterial);
-        if (cardBorder.material.HasProperty("_IsFrame"))
-            cardBorder.material.SetInt("_IsFrame", 1);
-        if (cardBorder.material.HasProperty("_Color"))
-            cardBorder.material.SetColor("_Color", card.tintColor);
+        DestroyImmediate(cardBorder.sharedMaterial);
+        cardBorder.sharedMaterial = Instantiate(card.effectMaterial);
+        if (cardBorder.sharedMaterial.HasProperty("_IsFrame"))
+            cardBorder.sharedMaterial.SetInt("_IsFrame", 1);
+        if (cardBorder.sharedMaterial.HasProperty("_Color"))
+            cardBorder.sharedMaterial.SetColor("_Color", card.tintColor);
 
         if (card.StencilPrefab != null)
         {
@@ -31,13 +31,13 @@ public class WorldCard : MonoBehaviour
                 DestroyImmediate(stencilWorldOrigin.GetChild(i).gameObject);
             }
 
-            cardIcon.material = stencilWindowMaskMaterial;
+            cardIcon.sharedMaterial = stencilWindowMaskMaterial;
             stencilWorld = Instantiate(card.StencilPrefab, stencilWorldOrigin);
         }
         else
         {
-            DestroyImmediate(cardIcon.material);
-            cardIcon.material = Instantiate(card.effectMaterial); ;
+            DestroyImmediate(cardIcon.sharedMaterial);
+            cardIcon.sharedMaterial = Instantiate(card.effectMaterial); ;
         }
 
         cardIcon.sprite = card.displaySprite;
