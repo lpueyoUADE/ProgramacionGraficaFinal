@@ -70,7 +70,7 @@ Material:
     - _TransShadow: 0.9
     - _Translucency: 1
     - _WaveSpeed: -0.05
-    - __dirty: 0
+    - __dirty: 1
     m_Colors:
     - _AlbedoColor: {r: 0, g: 0.542474, b: 0.6666667, a: 0}
     - _Color0: {r: 0.079280876, g: 0.29811653, b: 0.3207547, a: 0}
