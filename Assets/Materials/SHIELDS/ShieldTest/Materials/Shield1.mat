@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShieldTest
+  m_Name: Shield1
   m_Shader: {fileID: 4800000, guid: a89060fbae761e342bde6951b62d7b93, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -55,14 +55,17 @@ Material:
     m_Floats:
     - _ChromaticAberration: 0.1
     - _Float0: 5
-    - _Float1: 0.375
+    - _Float1: 0.4
     - _Frecuency: 10
-    - _FresnelScale: 1
+    - _FresnelScale: 2.83
+    - _IntersectionPower: 0.109
+    - _IntersectionPower1: 0.192
     - _Opacity: 0.22
+    - _OpacityPower: 0.162
     - _PatternSize: 5
     - _PatternSpeed: -0.59
-    - _ShieldPatternPower: 25
-    - _ShieldRimPower: 2
+    - _ShieldPatternPower: 50
+    - _ShieldRimPower: 0.63
     - _TransAmbient: 0.2
     - _TransDirect: 1
     - _TransNormalDistortion: 0.1
@@ -74,6 +77,7 @@ Material:
     m_Colors:
     - _AlbedoColor: {r: 0, g: 0.542474, b: 0.6666667, a: 0}
     - _Color0: {r: 0.079280876, g: 0.29811653, b: 0.3207547, a: 0}
-    - _ShieldPatternColor: {r: 1, g: 0.23968992, b: 0, a: 0}
+    - _IntersectColor: {r: 0.21509436, g: 0.21509436, b: 0.21509436, a: 0}
+    - _ShieldPatternColor: {r: 0, g: 0.71768904, b: 1, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

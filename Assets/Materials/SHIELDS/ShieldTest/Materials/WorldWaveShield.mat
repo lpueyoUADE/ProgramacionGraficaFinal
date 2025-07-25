@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WorldWave
+  m_Name: WorldWaveShield
   m_Shader: {fileID: 4800000, guid: 2875107638de7ae4c928cb3d81d77bb3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
